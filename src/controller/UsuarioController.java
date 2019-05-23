@@ -66,7 +66,11 @@ public class UsuarioController extends HttpServlet {
 			usuario.setApellido(request.getParameter("apellido"));
 			
 			try {
-				usuarioDAO.guardar(usuario);
+				if(usuarioDAO.guardar(usuario)) {
+					response.sendRedirect("/primeraWe/view/IniciarSesion.jsp");
+				}else {
+					response.sendRedirect("/primeraWe/view/crear.jsp");
+				}
 				
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
