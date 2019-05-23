@@ -40,7 +40,7 @@ public class InicioSesion extends HttpServlet {
 		//redirecciono
 		if (opcion.equals("IniciarSesion")) {
 			System.out.println("Apretaste Inicio de sesion");
-			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/view/IniciarSesion.jsp");
+			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/view/SingIn.jsp");
 			requestDispatcher.forward(request, response);
 		}if(opcion.equals("iniciar")) {
 			
@@ -61,7 +61,7 @@ public class InicioSesion extends HttpServlet {
 			if(echo) {
 				response.sendRedirect("/primeraWe/view/menu.jsp");
 			}else {
-				response.sendRedirect("/primeraWe/view/IniciarSesion.jsp");
+				response.sendRedirect("/primeraWe/view/SingIn.jsp.jsp");
 			}
 			
 		} catch (ClassNotFoundException e) {
