@@ -10,8 +10,7 @@
 	<h1>Iniciar Sesion</h1>
 	
 	<form action="Inicio" method="post">
-	<input type="hidden" name="nextPage" value="iniciar">
-	<input type="hidden" name="opcion" value="">
+	<input type="hidden" name="opcion" value=""iniciar"">
 		<table border="1">
 			<tr>
 				<td>Nombre Usuario:</td>

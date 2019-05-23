@@ -36,14 +36,13 @@ public class InicioSesion extends HttpServlet {
 		// TODO Auto-generated method stub
 		//obtengo los valores de los hypervinculos
 		String opcion=request.getParameter("opcion");
-		String nextPage = request.getParameter("nextPage");
 		
 		//redirecciono
 		if (opcion.equals("IniciarSesion")) {
 			System.out.println("Apretaste Inicio de sesion");
 			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/view/IniciarSesion.jsp");
 			requestDispatcher.forward(request, response);
-		}if(nextPage.equals("iniciar")) {
+		}if(opcion.equals("iniciar")) {
 			
 			System.out.println("entraste aca");
 			
