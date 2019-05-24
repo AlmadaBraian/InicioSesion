@@ -16,15 +16,17 @@ public class Consultas extends Conexion{
 		ResultSet resultado=null;
 		try {
 			conexion.setAutoCommit(false);
-			
 			String comando = "select * from users where nombreusuario=? and contrasenia=? ";
 			statement=conexion.prepareStatement(comando);
 			statement.setString(1, usuario);
 			statement.setString(2, contrasenia);
-
-			resultado=statement.executeQuery();
 			
+			resultado=statement.executeQuery();
+			//System.out.println(resultado.next());
 			if(resultado.next()) {
+				conexion.commit();
+				statement.close();
+				conexion.close();
 				return true;
 			}
 

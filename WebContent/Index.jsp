@@ -6,20 +6,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Menu de Opciones</title>
 <meta name= "viewport" content="width=devicewith, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 </head>
 <body>
-	<h1>Menu de Opciones Usuarios</h1>
+	<center><h1>Menu de Opciones Usuarios</h1></center>
 	<%//creo una tabla %>
-	<table border="1"> 
+	<center><table border="1"> 
 	<tr><%//creo un hypervinculo %>
 		<td> <a href="usuarios?opcion=crear"> Registrate</a></td>
 	</tr>
 	<tr>
 		<td> <a href="Inicio?opcion=IniciarSesion">Iniciar Sesion</a></td>
 	</tr>
-	</table>
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	</table></center>
+	<script src="bootstrap/js/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

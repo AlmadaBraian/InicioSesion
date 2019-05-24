@@ -67,7 +67,7 @@ public class UsuarioController extends HttpServlet {
 			
 			try {
 				if(usuarioDAO.guardar(usuario)) {
-					response.sendRedirect("/primeraWe/view/SingIn.jsp");
+					response.sendRedirect("/primeraWe/Index.jsp");
 				}else {
 					response.sendRedirect("/primeraWe/view/crear.jsp");
 				}
