@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*" %>
+<%@ page import = "controller.Autenticacion" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,6 +25,8 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link href="bootstrap/css/estilo.css" rel="stylesheet" type="text/css">
+	<script src="controller/InicioSesion.java">
+</script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
@@ -59,7 +63,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block">Ingresar</button>
+        <button class="btn btn-lg btn-primary btn-block" name="btn_ingresar">Ingresar</button>
         </div>
       </form>
 

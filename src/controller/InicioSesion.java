@@ -54,15 +54,18 @@ public class InicioSesion extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		if(verificar(request, response)) {
+			response.sendRedirect("/primeraWe/view/menu.jsp");
+		}
+		
+		doGet(request, response);
+	}
+	
+	protected boolean verificar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			echo=Consultas.autenticacion((request.getParameter("nombreUsuario")),(request.getParameter("password")));
 			System.out.println(echo);
-			if(echo) {
-				response.sendRedirect("/primeraWe/view/menu.jsp");
-			}else {
-				System.out.println("no entra");
-				request.getRequestDispatcher("/view/SingIn.jsp");
-			}
+
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -71,8 +74,7 @@ public class InicioSesion extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		doGet(request, response);
+		return echo;
 	}
 
 }
