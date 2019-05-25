@@ -55,7 +55,13 @@ public class InicioSesion extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		if(verificar(request, response)) {
-			response.sendRedirect("/primeraWe/view/menu.jsp");
+			response.sendRedirect("/primeraWe/menu.jsp");
+		}else {
+			//response.sendError(1);
+			response.reset();
+			RequestDispatcher requestDispatcher=request.getRequestDispatcher("/view/SingIn.jsp");
+			requestDispatcher.forward(request, response);
+			response.sendRedirect("/primeraWe/view/SingIn.jsp");
 		}
 		
 		doGet(request, response);

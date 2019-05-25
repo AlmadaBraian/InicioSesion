@@ -191,7 +191,8 @@ public class UsuarioDAO {
 
 			
 			
-			u.setIdUsuario(resultset.getInt(1));				u.setNombreUsuario(resultset.getString(2));
+			u.setIdUsuario(resultset.getInt(1));
+			u.setNombreUsuario(resultset.getString(2));
 			u.setContrasenia(resultset.getString(3));
 			u.setCorreo(resultset.getString(4));
 			u.setNombre(resultset.getString(5));
